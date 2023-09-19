@@ -1,0 +1,26 @@
+  int counter_sec = -1;
+  int counter_min = 0;
+  int counter_hour = 0;
+while (1)
+    {
+	  counter_sec++;
+  	  if(counter_sec == 60)
+  	  {
+  		  counter_min ++;
+  		  counter_sec = 0;
+  	  }
+  	  if(counter_min == 60)
+  	  {
+  		  counter_hour ++;
+  		  counter_min = 0;
+  	  }
+  	  if(counter_hour == 12)
+  	  {
+  		  counter_hour = 0;
+  	  }
+  	  setNumberOnClock((counter_sec/5));
+  	  setNumberOnClock((counter_min/5));
+  	  setNumberOnClock(counter_hour);
+  	  HAL_Delay(10);
+  	  clearNumberOnClock(13);
+    }

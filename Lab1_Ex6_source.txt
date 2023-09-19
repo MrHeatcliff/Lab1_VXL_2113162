@@ -1,0 +1,71 @@
+int state = 0;
+  HAL_GPIO_WritePin(LED_12H_GPIO_Port, LED_12H_Pin, SET);
+  HAL_GPIO_WritePin(LED_1H_GPIO_Port, LED_1H_Pin, SET);
+  HAL_GPIO_WritePin(LED_2H_GPIO_Port, LED_2H_Pin, SET);
+  HAL_GPIO_WritePin(LED_3H_GPIO_Port, LED_3H_Pin, SET);
+  HAL_GPIO_WritePin(LED_4H_GPIO_Port, LED_4H_Pin, SET);
+  HAL_GPIO_WritePin(LED_5H_GPIO_Port, LED_5H_Pin, SET);
+  HAL_GPIO_WritePin(LED_6H_GPIO_Port, LED_6H_Pin, SET);
+  HAL_GPIO_WritePin(LED_7H_GPIO_Port, LED_7H_Pin, SET);
+  HAL_GPIO_WritePin(LED_8H_GPIO_Port, LED_8H_Pin, SET);
+  HAL_GPIO_WritePin(LED_9H_GPIO_Port, LED_9H_Pin, SET);
+  HAL_GPIO_WritePin(LED_10H_GPIO_Port, LED_10H_Pin, SET);
+  HAL_GPIO_WritePin(LED_11H_GPIO_Port, LED_11H_Pin, SET);
+  while (1)
+  {
+	  if(state == 12) state = 0;
+	  switch(state++)
+	  {
+	  case 0:
+		  HAL_GPIO_TogglePin(LED_12H_GPIO_Port, LED_12H_Pin);
+		  break;
+	  case 1:
+		  HAL_GPIO_TogglePin(LED_1H_GPIO_Port, LED_1H_Pin);
+		  break;
+	  case 2:
+		  HAL_GPIO_TogglePin(LED_2H_GPIO_Port, LED_2H_Pin);
+		  break;
+	  case 3:
+		  HAL_GPIO_TogglePin(LED_3H_GPIO_Port, LED_3H_Pin);
+		  break;
+	  case 4:
+		  HAL_GPIO_TogglePin(LED_4H_GPIO_Port, LED_4H_Pin);
+		  break;
+	  case 5:
+		  HAL_GPIO_TogglePin(LED_5H_GPIO_Port, LED_5H_Pin);
+		  break;
+	  case 6:
+		  HAL_GPIO_TogglePin(LED_6H_GPIO_Port, LED_6H_Pin);
+		  break;
+	  case 7:
+		  HAL_GPIO_TogglePin(LED_7H_GPIO_Port, LED_7H_Pin);
+		  break;
+	  case 8:
+		  HAL_GPIO_TogglePin(LED_8H_GPIO_Port, LED_8H_Pin);
+		  break;
+	  case 9:
+		  HAL_GPIO_TogglePin(LED_9H_GPIO_Port, LED_9H_Pin);
+		  break;
+	  case 10:
+		  HAL_GPIO_TogglePin(LED_10H_GPIO_Port, LED_10H_Pin);
+		  break;
+	  case 11:
+		  HAL_GPIO_TogglePin(LED_11H_GPIO_Port, LED_11H_Pin);
+		  break;
+	  default:
+		  HAL_GPIO_TogglePin(LED_12H_GPIO_Port, LED_12H_Pin);
+		  HAL_GPIO_TogglePin(LED_1H_GPIO_Port, LED_1H_Pin);
+		  HAL_GPIO_TogglePin(LED_2H_GPIO_Port, LED_2H_Pin);
+		  HAL_GPIO_TogglePin(LED_3H_GPIO_Port, LED_3H_Pin);
+		  HAL_GPIO_TogglePin(LED_4H_GPIO_Port, LED_4H_Pin);
+		  HAL_GPIO_TogglePin(LED_5H_GPIO_Port, LED_5H_Pin);
+		  HAL_GPIO_TogglePin(LED_6H_GPIO_Port, LED_6H_Pin);
+		  HAL_GPIO_TogglePin(LED_7H_GPIO_Port, LED_7H_Pin);
+		  HAL_GPIO_TogglePin(LED_8H_GPIO_Port, LED_8H_Pin);
+		  HAL_GPIO_TogglePin(LED_9H_GPIO_Port, LED_9H_Pin);
+		  HAL_GPIO_TogglePin(LED_10H_GPIO_Port, LED_10H_Pin);
+		  HAL_GPIO_TogglePin(LED_11H_GPIO_Port, LED_11H_Pin);
+		  break;
+	  }
+	  HAL_Delay(1000);
+  }
